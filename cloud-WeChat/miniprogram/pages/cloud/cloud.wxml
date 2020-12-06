@@ -1,0 +1,2 @@
+<view>云开发</view>
+<button bindtap="insert">插入数据</button>
