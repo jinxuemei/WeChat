@@ -29,7 +29,25 @@ Page({
       
     }
   },
+  async upload(){
+    //1、选择图片
+    let chooseImgRes
+    let tempFilePaths
+    try {
+      chooseImgRes = await wx.chooseImage({
+        count:1,
+        sizeType:['original','compressed'],
+        sourceType:['album','camera'],
+      })
+      tempFilePaths = chooseImgRes.tempFilePaths
+    } catch (error) {
+      console.error(error);
+    }
 
+    //2、图片上传云存储
+    
+    //3、保存fileID到存储库
+  },
   /**
    * 生命周期函数--监听页面加载
    */
